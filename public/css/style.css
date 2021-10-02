@@ -1,0 +1,17 @@
+ul li {
+    list-style-type: none;
+    padding: 1rem;
+}
+
+ul {
+    padding: 0px;
+}
+
+.card-header-style {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-style {
+    margin-bottom: 0.2rem;
+}
