@@ -5,7 +5,7 @@ import Swal from 'sweetalert2'
 
 import ReactDOM from 'react-dom';
 
-function Crews() {
+function Ships() {
     const [firstName, setFirstName] = useState("");
     const [middlName, setMiddlName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -19,16 +19,11 @@ function Crews() {
   
     const handleSubmit = () => {
         const packets = {
-            first_name:  firstName,
-            middle_name: middlName,
-            last_name: lastName,
-            email: email,
-            ship_id: shipId,
-            phone: phone,
-            address: address
+            ship_name:  firstName,
+            ship_capacity: middlName,
         };
 
-        axios.post('/api/Crew', packets).then(
+        axios.post('/api/Ships', packets).then(
             (response) => {
                 if (response['status'] == 200) {
                     Swal.fire({
@@ -52,7 +47,7 @@ function Crews() {
       }
     
     const getCrewData = () => {
-        axios.get('/api/Crew').then(
+        axios.get('/api/Ships').then(
             (response) => {
                 setCrews(response['data']['data'])
             }
@@ -64,28 +59,18 @@ function Crews() {
             <table class="table">
             <thead>
                   <tr>
-                    <th scope="col">Avatar</th>
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Phone</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Duties</th>
-                    <th scope="col">Ship</th>
+                    <th scope="col">Ship capacity</th>
                     <th scope="col">Action</th>
                   </tr>
             </thead>
             <tbody>
             {crews.map((crew, index) => (
                 <tr>
-                <td scope="row">Avatar</td>
                 <td scope="row">{crew.id}</td>
-                <td>{crew.first_name}{' '}{crew.last_name}</td>
-                <td scope="row">{crew.phone}</td>
-                <td scope="row">{crew.email}</td>
-                <td scope="row">{crew.address}</td>
-                <td scope="row">Duties</td>
-                <td scope="row">{crew.ship_id}</td>
+                <td>{crew.ship_name}</td>
+                <td>{crew.ship_capacity}</td>
                 <th scope="col"><span class='btn btn-sm btn-primary'>Action</span></th>
                 </tr>
             ))}
@@ -106,7 +91,7 @@ function Crews() {
         <div className="modal-dialog" role="document">
             <div className="modal-content">
             <div className="modal-header">
-                <h5 className="modal-title" id="exampleModalLabel">Add crew</h5>
+                <h5 className="modal-title" id="exampleModalLabel">Add Ship</h5>
                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -117,54 +102,15 @@ function Crews() {
                 <label for="exampleInputEmail1">Name</label>
                 <input type="text" 
                 className="form-control input-style"
-                placeholder="First name" 
+                placeholder="Ship Name" 
                 value={firstName}
                 onChange= {(e) => setFirstName(e.target.value)}
                 />
                 <input type="text" 
                 className="form-control input-style"  
-                placeholder="Middle name" 
+                placeholder="Ship Capacity" 
                 value={middlName}
                 onChange= {(e) => setMiddlName(e.target.value)}
-                />
-                <input type="text" 
-                className="form-control input-style"  
-                placeholder="Middle name" 
-                value={lastName}
-                onChange= {(e) => setLastName(e.target.value)}
-                />
-            </div>
-            <div className="form-group">
-            <label for="exampleInputEmail1">Contact</label>
-            <input type="email" 
-            className="form-control input-style" 
-            id="exampleInputEmail1" 
-            aria-describedby="emailHelp" 
-            placeholder="Enter email"
-            value={email}
-            onChange= {(e) => setEmail(e.target.value)}
-            />
-            <input type="text" 
-            className="form-control input-style" 
-            placeholder="Enter phone number"
-            value={phone}
-            onChange= {(e) => setPhone(e.target.value)}
-            />
-            
-            <input type="text" 
-            className="form-control input-style" 
-            placeholder="Enter Address"
-            value={address}
-            onChange= {(e) => setAddress(e.target.value)}
-            />
-            </div>
-            <div className="form-group">
-                <label for="exampleInputEmail1">Ship ID</label>
-                <input type="number" 
-                className="form-control input-style"  
-                placeholder="Ship ID" 
-                value={shipId}
-                onChange= {(e) => setShipId(e.target.value)}
                 />
             </div>
             </form>
@@ -180,9 +126,9 @@ function Crews() {
 
     return (
         <div className="card">
-            <div className="card-header card-header-style"><span>Crews</span> 
+            <div className="card-header card-header-style"><span>Ships</span> 
             <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                Add crew
+                Add Ship
             </button>
             </div>
             <div className="card-body">
@@ -193,5 +139,5 @@ function Crews() {
     );
 }
 
-export default Crews;
+export default Ships;
 
