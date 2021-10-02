@@ -8,11 +8,12 @@ function Crews() {
     const [firstName, setFirstName] = useState("");
     const [middlName, setMiddlName] = useState("");
     const [lastName, setLastName] = useState("");
+    const [email, setEmail] = useState("");
 
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert('The name you entered was: ${name}')
+        alert('The name you entered was: ${firstName}')
       }
 
     const Crewmodal = (
@@ -26,7 +27,7 @@ function Crews() {
                 </button>
             </div>
             <div class="modal-body">
-            <form>
+            <form onSubmit={handleSubmit}>
             <div class="form-group">
                 <label for="exampleInputEmail1">Name</label>
                 <input type="text" 
@@ -50,7 +51,14 @@ function Crews() {
             </div>
             <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+            <input type="email" 
+            class="form-control" 
+            id="exampleInputEmail1" 
+            aria-describedby="emailHelp" 
+            placeholder="Enter email"
+            value={email}
+            onChange= {(e) => setEmail(e.target.value)}
+            />
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             </form>
