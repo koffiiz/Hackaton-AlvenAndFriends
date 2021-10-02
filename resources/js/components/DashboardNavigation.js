@@ -4,12 +4,25 @@ import Crews from './Crews';
 
 function DashboardNav() {
     return (
-        <div className="card">
-            <div className="card-header">Dashboard</div>
-            <div className="card-body">
+        <div id="side-nav" class="card">
+            <div class="card-header">Dashboard</div>
+            <div class="card-body">
             <ul>
-                <li>Crews</li>
-                <li>Ships</li>
+                <li>
+                    <a href="#" class="side-nav-link">
+                        <span>Crews</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="side-nav-link">
+                        <span>Ships</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="side-nav-link">
+                        <span>Duties</span>
+                    </a>
+                </li>
             </ul>
             </div>
         </div>
