@@ -28,7 +28,7 @@ function Ships() {
                 if (response['status'] == 200) {
                     Swal.fire({
                         title: 'Success',
-                        text: 'Succesfully added a crew',
+                        text: 'Succesfully added a ship',
                         icon: 'success',
                         confirmButtonText: 'Cool'
                       })
