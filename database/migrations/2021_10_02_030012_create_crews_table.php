@@ -15,7 +15,7 @@ class CreateCrewsTable extends Migration
     {
         Schema::create('crews', function (Blueprint $table) {
             $table->id();
-            $table->string('avatar');
+            $table->string('avatar')->nullable();
             $table->foreignId('ship_id')->nullable();
             $table->string('first_name')->nullable();
             $table->string('middle_name')->nullable();

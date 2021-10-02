@@ -14,7 +14,12 @@ class CrewController extends Controller
      */
     public function index()
     {
-        //
+        $crews = Crew::all();
+        return response()->json([
+            'success' => true,
+            'data' => $crews,
+            'message' => 'Succesfully Fetched'
+        ]);
     }
 
     /**
@@ -35,7 +40,25 @@ class CrewController extends Controller
      */
     public function store(Request $request)
     {
-        dd('test');
+        // ship_id: shipId,
+        //     phone: phone,
+        //     address: address
+        $crew = new Crew;
+        $crew->first_name = $request->first_name; 
+        $crew->middle_name = $request->middle_name; 
+        $crew->last_name = $request->last_name; 
+        $crew->email = $request->email;
+        $crew->phone = $request->phone;
+        $crew->ship_id = $request->ship_id;
+        $crew->address = $request->address;
+        
+        $crew->save();
+
+        return response()->json([
+            'success' => true,
+            'data' => $crew,
+            'message' => 'Succesfully created'
+        ]);
     }
 
     /**
