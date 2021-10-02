@@ -1,8 +1,11 @@
 ul li {
     list-style-type: none;
+    padding: 1rem 0;
 }
+
 
 .card-header-style {
     display: flex;
     justify-content: space-around;
 }
+

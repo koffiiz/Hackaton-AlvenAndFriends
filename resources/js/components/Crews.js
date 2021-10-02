@@ -81,7 +81,7 @@ function Crews() {
             </div>
 
             <div className="card-body">
-               
+            <Crews-table /> 
             </div>
             {Crewmodal}
         </div>

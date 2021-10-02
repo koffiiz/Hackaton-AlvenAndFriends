@@ -15,3 +15,30 @@ ul {
 .input-style {
     margin-bottom: 0.2rem;
 }
+
+/* Header */
+img.logo {
+    width: 100%;
+    max-width: 150px;
+}
+
+/* Side Navigation */
+#side-nav > div.card-body > ul > li {
+    padding-left: 0px;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 0px;
+}
+#side-nav > div.card-body > ul > li a:hover {
+    color: #818182;
+    text-decoration: none;
+}
+
+#side-nav > div.card-body > ul > li > a > span {
+    font-weight: 800;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+} 
