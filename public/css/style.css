@@ -21,6 +21,9 @@ img.logo {
     width: 100%;
     max-width: 150px;
 }
+nav.navbar.navbar-expand-md.navbar-light.bg-white.shadow-sm{
+    background-color: #ff4a4a;
+}
 
 /* Side Navigation */
 #side-nav > div.card-body > ul > li {
@@ -42,3 +45,25 @@ img.logo {
     text-transform: uppercase;
     letter-spacing: 1px;
 } 
+
+#side-nav > div.card-body > ul > li:nth-child(1) {
+    padding-top: 0px;
+}
+#side-nav > div.card-body > ul > li a {
+    color: #295368;
+}
+
+/* Card Global */
+div.card-header {
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.card-header-style{
+ align-items: center;
+}
+.card-header{
+    background-color: rgb(41 83 104);
+    color: #fff;
+}
