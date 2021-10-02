@@ -10,17 +10,20 @@ function DashboardNav() {
             <ul>
                 <li>
                     <a href="#" class="side-nav-link">
-                        <span>Crews</span>
+                    <img class="side-icon" src="../images/crews.png" alt="crews-icon" srcset="" />
+                    <span>Crews</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="side-nav-link">
-                        <span>Ships</span>
-                    </a>
+                    <img class="side-icon" src="../images/crews.png" alt="ship-icon" srcset="" />
+                    <span>Ships</span>
+                    </a> 
                 </li>
                 <li>
                     <a href="#" class="side-nav-link">
-                        <span>Duties</span>
+                    <img class="side-icon" src="../images/crews.png" alt="duties-icon" srcset="" />
+                    <span>Duties</span>
                     </a>
                 </li>
             </ul>
