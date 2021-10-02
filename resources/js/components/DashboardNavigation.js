@@ -17,13 +17,13 @@ function DashboardNav() {
                 </li>
                 <li>
                     <a href="/ships" class="side-nav-link">
-                    <img class="side-icon" src="../images/crews.png" alt="ship-icon" srcset="" />
+                    <img class="side-icon" src="../images/ship.png" alt="ship-icon" srcset="" />
                     <span>Ships</span>
                     </a> 
                 </li>
                 <li>
                     <a href="/duties" class="side-nav-link">
-                    <img class="side-icon" src="../images/crews.png" alt="duties-icon" srcset="" />
+                    <img class="side-icon" src="../images/duties.png" alt="duties-icon" srcset="" />
                     <span>Duties</span>
                     </a>
                 </li>
